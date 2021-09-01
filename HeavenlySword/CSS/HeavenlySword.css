@@ -1,0 +1,292 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size:22px;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+/* 第一區塊header調整 */
+
+header{
+    width:100%;
+    height:80px;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow:10px 1rem 1rem rgba(0,0,0,0.1);
+    margin-bottom:30px;
+    font-family:"標楷體";
+    opacity:0.9;
+}
+
+header img{
+    width:70px;
+    height:70px;
+    margin-right:10px;
+    border-radius:50%;
+}
+
+.logo{
+    font-size:38px;
+    color:white;
+    text-decoration: none;
+    padding:10px;
+    font-family:"標楷體";
+}
+
+.logo:hover{
+    font-size:38px;
+    color:white;
+    text-decoration: none;
+    font-family:"標楷體";
+}
+
+header .navbar a{
+    text-decoration: none;
+    color:white;
+    font-weight:900;
+    font-size:26px;
+    padding-left:20px;
+}
+
+header .navbar a:hover{
+    font-size:26px;
+    color:rgb(9,152,152);
+    padding:10px;
+    background-color:white;
+    font-weight:900;
+    margin-left:10px;
+    transition:1s all;
+    border-radius:30px;
+}
+
+header .navbar i{
+    padding-right:5px;
+}
+
+/* 按鈕製作 */
+header #menu{
+    font-size:25px;
+    cursor:pointer;
+    color:white;
+    border:3px solid rgb(239, 243, 10);
+    border-radius:5px;
+    padding:8px;
+    display:none;
+}
+
+/* 搜尋search的css調整 */
+.form-input{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#myInput{
+    width:695px;
+    background-color:lightgreen;
+    color:black;
+    font-size:30px;
+    margin-bottom:35px;
+    border-radius:30px;
+}
+
+
+/* 內容格式css調整 */
+.container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+
+#myTable{
+    border-radius:20px;
+    width:700px;
+    text-align:center;
+    background-color:#f1eded;
+}
+
+tr{
+    text-align:left;
+    width:500px;
+}
+
+td{
+    padding:20px;
+    height:150px;
+}
+
+/* 最上層按鈕css */
+
+#scroll-up{
+    background-color:coral;
+    color:white;
+    padding:10px;
+    border:5px solid coral;
+    border-radius:10px;
+    position:fixed;
+    top:-120%;
+    right:20px;
+    opacity:0.8;
+    transition: 1s linear; 
+    z-index:100;
+}
+
+#scroll-up.active{
+    top:85%;
+}
+
+/* footer */
+
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:70px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.credit{
+    font-size:30px;
+    color:white;
+    text-align:center;
+    color:black;
+    border:5px solid bisque;
+    border-radius:20px;
+    background-color:rgb(236, 164, 176);
+    padding:18px 10px 18px 10px;
+}
+
+.credit:hover{
+    background-color:pink;
+    box-shadow: inset 400px 0 0 0 pink;
+    transition: 1s all;
+}
+
+@media (max-width:1000px){
+    /* header-logo調整 */
+    .logo{
+        font-size:25px;
+        color:white;
+        text-decoration: none;
+        font-family:"標楷體";
+        position:absolute;
+        top:-6px;
+        left:2px;
+    }
+
+    .logo:hover{ 
+        font-size:25px;
+        color:white;
+        text-decoration: none;
+        border:none;
+        font-family:"標楷體";
+        position:absolute;
+        top:-6px;
+        left:2px;
+    }
+
+    /* 手機按鈕調整 */
+    header #menu{
+        display:initial;
+        position:absolute;
+        top:15px;
+        right:8px;
+
+    }
+
+    /* navbar調整 */
+    header .navbar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+        position:absolute;
+        top:80px ; left:0 ; right:0;
+        background-color:rgb(255,208,0);
+        padding:30px;
+        margin-top:5px;
+        border-top:3px solid gray;
+        clip-path:polygon(0 0 , 100% 0, 100% 0 ,0 0)
+    }
+
+    header .navbar a{
+        flex:1 1 auto;
+        text-decoration: none;
+        font-weight:normal;
+        font-size:26px;
+        padding:8px;
+        padding-left:20px;
+        border-left:3px solid gray;
+        background-color:white;
+        width:100%;
+        color:rgb(0, 121, 80);
+        
+    }
+
+    header .navbar.active{
+        clip-path:polygon(0 0,100% 0 ,100% 100% ,0 100%);
+        padding:10px; 
+    }
+
+    /* 內容搜尋調整 */
+    #myInput{
+        width:85%;
+        background-color:lightgreen;
+        color:black;
+        font-size:30px;
+        margin-bottom:50px;
+    }
+
+    header{
+        width:100%;
+        height:80px;
+        padding:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgb(228, 53, 22);
+        margin-bottom:30px;
+        font-family:"標楷體";
+    }
+
+    /* 內容格式css調整 */
+    .container{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        margin-bottom:45px;
+    }
+
+
+    #myTable{
+        border-radius:20px;
+        width:100%;
+        text-align:center;
+        background-color:#f1eded;
+    }
+
+    tr{
+        text-align:left;
+    }
+
+    td{
+        padding:20px;
+        font-size:18px;
+    }
+}
+
+
+
+

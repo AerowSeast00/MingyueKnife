@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天涯攻略網</title>
+    <!-- JQuery 連結 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS 連結 -->
+    <link rel="stylesheet" href="CSS/Home.css">
+    <!-- Boostrap5.0 導入程式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body onload="visitedCounter()">
+<!-- 第一區header -->
+<header>
+    <a id="home" class="logo" href="Home.html"><img src="image/LOGO.jpg">天涯攻略資訊網站</a>
+    <div class="fas fa-bars" id="menu"></div>
+    <nav class="navbar"> 
+        <a href="Teaparty.html" target="_self" id="item-link"><i class="fas fa-fan"></i>茶話會答題</a>
+        <a href="Rainbow.html" target="_self" id="item-link"><i class="fas fa-rainbow"></i>彩虹錦鯉</a>
+        <a href="Heart.html" id="item-link"><i class="far fa-heart"></i>心運答題</a>
+        <a href="#" id="item-link" data-bs-target="#favoriblity-Modal" data-bs-toggle="modal"><i class="fab fa-gratipay"></i>捕快、好感度攻略</a>
+        <a href="#" id="item-link" data-bs-target="#Serial-number" data-bs-toggle="modal"><i class="fab fa-amilia"></i>天涯序號</a>
+    </nav>
+</header>
+
+<!-- header-modal製作 好感度、捕快 -->
+<div class="modal fade" id="favoriblity-Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal-header -->
+            <div class="modal-header">
+                <h1>捕快、夥伴好感度網站</h1>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- modal-body -->
+            <div class="modal-body">
+                <h3>夥伴好感度：<a href="https://forum.gamer.com.tw/C.php?bsn=36143&snA=291" target="_blank">請點我一下-即刻導入網站</a></h3>
+                <h3>好感度話題：<a href="https://forum.gamer.com.tw/C.php?bsn=36143&snA=1551" target="_blank">請點我一下-即刻導入網站</a></h3>
+                <h3>捕快判案去：<a href="https://forum.gamer.com.tw/C.php?bsn=36143&snA=364" target="_blank">請點我一下-即刻導入網站</a></h3>
+                <i class="fas fa-star"></i><span id="control-after">  網址點入可使用搜尋功能來進行找尋：Ctrl+F  </span><i class="fas fa-star"></i>
+                <div class="content">
+                    <h3>家園風水值：<button id="dlbtn" type="btn">檔案下載</button></h3>
+                </div>
+            </div>
+            <!-- modal-footer -->
+            <div class="modal-footer">
+                <h2>網站由巴哈樓主：小龍女、瓦干達乄飄皇編制</h2>
+                <h2>&copy版權由樓主所有，請勿亂傳</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- header-modal製作 序號 -->
+<div class="modal fade" id="Serial-number">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- modal-header -->
+            <div class="modal-header">
+                <h1>天涯明月刀M-全序號</h1>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- modal-body -->
+            <div class="modal-body">
+                <h3>我的天涯888</h3>
+                <h3>我的天涯遠傳</h3>
+                <h3>我的天涯阿暖</h3>
+                <h3>台新助你飛</h3>
+                <h3>富邦闖天涯</h3>
+                <i class="fas fa-star"></i>
+                    <span id="control-after"> 輸入方式：遊戲開啟-主介面-福利-禮包碼兌換-口令碼兌換-輸入上面序號(5個) </span>
+                <i class="fas fa-star"></i>
+            </div>
+            <!-- modal-footer -->
+            <div class="modal-footer">
+                <h2>以上序號請盡快兌換完畢</h2>
+                <h2>以免日後序號無法進行使用</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 第二區carousel幻燈片 -->
+<div class="carousel slide" data-bs-ride="carousel" id="Slideshow">
+    <div class="carousel-inner">
+        <!-- 第一張圖片 -->
+        <div class="carousel-item active">
+            <img src="image/photo1.jpg" alt="photo one">
+        </div>
+        <!-- 第二張圖片 -->
+        <div class="carousel-item">
+            <img src="image/photo2.jpg" alt="photo two">
+        </div>
+        <!-- 第三張圖片 -->
+        <div class="carousel-item">
+            <img src="image/photo3.jpg" alt="photo three">
+        </div>
+        <!-- 按鈕設置 -->
+        <button class="carousel-control-prev" data-bs-target="#Slideshow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#Slideshow" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- 指示按鍵設置 -->
+        <div class="carousel-indicators">
+            <button data-bs-target="Slideshow"  data-bs-slide-to="0" class="active"></button>
+            <button data-bs-target="Slideshow"  data-bs-slide-to="1"></button>
+            <button data-bs-target="Slideshow"  data-bs-slide-to="2"></button>
+        </div>
+    </div>
+</div>
+
+<!-- 第三區 container -->
+<section id="introduce">
+    <h1>天涯明月刀M<span>遊玩基礎介紹</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <h2><a href="https://mbm.garena.tw/feature?active=2" target="_blank">職業選擇</a></h2><br>
+            <div class="content">
+                <div class="content-left">
+                    <h3>太白</h3><br>
+                    <h3>神威</h3><br>
+                    <h3>唐門</h3><br>
+                    <h3>天香</h3><br>
+                    <h3>移花</h3><br>
+                </div>
+                <div class="content-right">
+                    <h3>丐幫</h3><br>
+                    <h3>真武</h3><br>
+                    <h3>神刀(未出)</h3><br>
+                    <h3>五毒(未出)</h3><br>
+                </div>
+            </div>
+        </div>
+        <div class="box-spec">
+            <h2><a href="https://forum.gamer.com.tw/C.php?bsn=36143&snA=121" target="_blank">洗鍊</a></h2>
+            <div class="content1">
+                <div class="professional-left">                    
+                    <h3>職業洗鍊選擇<br>唐門、真武、天香、移花</h3><br>
+                    <p>上方六件套==>雙暗傷<br>下方六件套==>雙氣勁</p>
+                </div>
+                <div class="professional-right">                    
+                    <h3>職業洗鍊選擇<br>太白、神威、神刀、丐幫</h3><br>
+                    <p>上方六件套==>雙力道<br>下方六件套==>雙會心</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="box">
+            <h2><a href="https://forum.gamer.com.tw/C.php?bsn=36143&snA=50" target="_blank">身份</a></h2><br>
+            <div class="content">
+                <div class="content-left">
+                    <h3>捕快</h3><br>
+                    <h3>標師</h3><br>
+                    <h3>廚師</h3><br>
+                    <h3>遊俠</h3><br>
+                    <h3>雅士</h3><br>
+                </div>
+                <div class="content-right">
+                    <h3>懸眼</h3><br>
+                    <h3>天芒</h3><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 回到最上層按鈕 -->
+<a href="#home" class="fas fa-angle-up" id="scroll-up"></a>
+
+<!-- footer -->
+
+<section class="footer" id="footer">
+    <div class="social">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square" style="color:blue;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square" style="color:rgb(208, 0, 191);"></i></a>
+        <a href="https://line.me/zh-hant/" target="_blank"><i class="fab fa-line" style="color:rgb(0, 255, 34);"></i></a>
+    </div>
+    <h1 class="credit">由<span>緋夜丷編輯製作</span>版權所有&copy
+        <span id="visit">拜訪次數：<span id="visited"></span></span>
+    </h1>
+</section>
+
+</body>
+
+<!-- JQuery+Js在這 -->
+<script src="JavaScript/HeavenlySword.js"></script>
+
+</html>

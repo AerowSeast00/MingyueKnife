@@ -1,0 +1,532 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size:22px;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+/* 第一區塊header調整 */
+
+header{
+    width:100%;
+    height:80px;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow:10px 1rem 1rem rgba(0,0,0,0.1);
+    font-family:"標楷體";
+    opacity:0.9;
+}
+
+header img{
+    width:70px;
+    height:70px;
+    margin-right:10px;
+    border-radius:50%;
+}
+
+.logo{
+    font-size:38px;
+    color:white;
+    text-decoration: none;
+    padding:10px;
+    font-family:"標楷體";
+}
+
+.logo:hover{
+    font-size:38px;
+    color:white;
+    text-decoration: none;
+    font-family:"標楷體";
+}
+
+header .navbar a{
+    text-decoration: none;
+    color:white;
+    font-weight:900;
+    font-size:26px;
+    padding-left:25px;
+}
+
+header .navbar a:hover{
+    font-size:26px;
+    color:rgb(9,152,152);
+    padding:10px;
+    background-color:white;
+    font-weight:900;
+    margin-left:10px;
+    transition:1s all;
+    border-radius:30px;
+    z-index:1;
+}
+
+header .navbar i{
+    padding-right:5px;
+}
+
+/* Modal製作調整 */
+.modal .modal-dialog .modal-content{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,0.8267682072829132) 0%, rgba(148,187,233,0.8799894957983193) 100%);
+}
+
+
+.modal-header h1{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:36px;
+    color:white;
+    text-shadow:3px 3px 3px rgb(10, 167, 167),0 0 2px rgb(38, 224, 224);
+    font-weight:900;
+    font-family:"標楷體";
+}
+
+.modal-header button{
+    font-size:24px;
+    color:white;
+}
+
+.modal-body h3{
+    font-size:30px;
+    color:black;
+    font-family:"標楷體";
+}
+
+.modal-body a{
+    text-decoration:none;
+}
+
+.modal-body button{
+    width:150px;
+    border-radius:20px;
+    font-size:26px;
+    color:coral;
+    font-family:"標楷體";
+    padding:5px 10px 5px 10px;
+    border:none;
+}
+
+.modal-body .content{
+    margin-top:5px;
+}
+
+.modal-body button:hover{
+    background-color:lightgreen;
+    box-shadow:inset 150px 0 0 0 lightgreen;
+    transition:1s all;
+}
+
+.modal-footer h2{
+    font-size:20px;
+    color:black;
+    font-family:"標楷體";
+}
+
+.modal-body #control-after{
+    font-size:18px;
+    color:red;
+}
+
+.modal-body i{
+    animation-name:ani-color;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes ani-color{
+    0%{color:rgb(38, 224, 224)}
+    25%{color:rgb(212, 38, 224)}
+    50%{color:rgb(233, 10, 148)}
+    75%{color:rgb(46, 235, 13)}
+    100%{color:rgb(236, 202, 11)}
+}
+
+/* 第二區幻燈片調整 */
+
+.container{
+    margin-bottom:20px;
+}
+
+.carousel-inner .carousel-item img{
+    width:100%;
+    height:100%;
+}
+
+/* 第三區內容調整第一格調整 */
+#introduce h1{
+    font-size:40px;
+    color:dodgerblue;
+    text-align:center;
+    padding:10px;
+    text-shadow:2px 2px 2px rgb(10, 240, 190),0 0 5px rgb(10, 240, 190);
+    font-family:"標楷體";
+    margin-top:15px;
+}
+
+#introduce span{
+    font-size:40px;
+    color:dodgerblue;
+    text-align:center;
+    padding:10px;
+    text-shadow:2px 2px 2px rgb(10, 240, 190),0 0 5px rgb(10, 240, 190);
+    font-family:"標楷體";
+}
+
+#introduce .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:20px;
+}
+
+#introduce .box-container .box,#introduce .box-container .box-spec{
+    flex:1 1 30px;
+    padding:10px;
+    box-shadow:5px 5px 5px rgb(140,140,140);
+    border:1px solid rgb(118,118,118);
+    background-color:rgb(255,208,0);
+    background-size:cover;
+    background-position:center;
+    object-fit: cover;
+    border-radius:20px;
+    padding-bottom:30px;
+    height:300px;
+    position:relative;
+    overflow: hidden;
+    box-shadow:0 2px 0 2px black;
+    opacity:0.9;
+}
+
+#introduce .box-container .box a,#introduce .box-container .box-spec a{
+    text-decoration: none;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    font-family:"標楷體";
+}
+
+#introduce .box-container .box .content,#introduce .box-container .box-spec .content{
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    margin-top:-20px;
+}
+
+#introduce .box-container .box .content .content-left,#introduce .box-container .box-spec .content .content-left{
+    flex:1 1 30px;
+}
+
+#introduce .box-container .box .content .content-right,#introduce .box-container .box-spec .content .content-left{
+    flex:1 1 30px;
+}
+
+#introduce .box-container .box .content h3,#introduce .box-container .box-spec .content h3{
+    font-size:26px;
+    color:rgb(9,152,152);
+    line-height:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:900;
+}
+
+#introduce .box-container .box .content p{
+    font-size:24px;
+    color:rgb(9,152,152);
+    font-weight:900;
+    line-height:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 第三區塊第二格調整 */
+#introduce .box-container .box-spec .content1{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:10px;
+    text-align:center
+}
+
+#introduce .box-container .box-spec .content1 .professional-left{
+    flex:1 1 30px;
+}
+
+#introduce .box-container .box-spec .content1 .professional-right{
+    flex:1 1 30px;
+}
+
+#introduce .box-container .box-spec .content1 h3{
+    font-size:24px;
+    font-weight:900;
+    color:rgb(9,152,152)
+}
+
+/* 按鈕製作 */
+header #menu{
+    font-size:25px;
+    cursor:pointer;
+    color:white;
+    border:3px solid rgb(239, 243, 10);
+    border-radius:5px;
+    padding:8px;
+    display:none;
+}
+/* 最上層按鈕css */
+
+#scroll-up{
+    background-color:coral;
+    color:white;
+    padding:10px;
+    border:5px solid coral;
+    border-radius:10px;
+    position:fixed;
+    top:-120%;
+    right:20px;
+    opacity:0.8;
+    transition: 1s linear; 
+    z-index:100;
+}
+
+#scroll-up.active{
+    top:85%;
+}
+
+/* footer */
+
+.footer{
+    background:gray;
+    text-align:center;
+    margin-bottom:-30px;
+    padding-top:8px;
+}
+
+.footer .social{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content: center;
+    align-items:center;
+}
+
+.footer .social i{
+    font-size:36px;
+}
+
+.footer .credit{
+    padding:10px;
+    color:rgb(67,67,67);
+    font-weight:bold;
+    font-size:24px;
+}
+
+.footer .credit span{
+    color:yellow;
+}
+
+#visit{
+    position:absolute;
+    right:10px;
+    color:rgb(33, 33, 175);
+    font-weight:700;
+    font-size:18px;
+    border:3px solid lightgreen;
+    border-radius:15px;
+    padding:3px;
+}
+
+#visited{
+    font-weight:700;
+    font-size:20px;
+}
+
+@media (max-width:1000px){
+    /* header-logo調整 */
+    .logo{
+        font-size:25px;
+        color:white;
+        text-decoration: none;
+        font-family:"標楷體"
+    }
+
+    .logo:hover{
+        font-size:25px;
+        color:white;
+        text-decoration: none;
+        border:none;
+        font-family:"標楷體"
+    }
+
+    #introduce h1{
+        font-size:36px;
+        color:dodgerblue;
+        text-align:center;
+        padding:10px;
+        text-shadow:2px 2px 2px rgb(10, 240, 190),0 0 5px rgb(10, 240, 190);
+        font-family:"標楷體";
+    }
+
+    /* 手機按鈕調整 */
+    header #menu{
+        display:initial;
+        position:absolute;
+        top:15px;
+        right:8px;
+
+    }
+
+    /* navbar調整 */
+    header .navbar{
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+        position:absolute;
+        top:80px ; left:0 ; right:0;
+        background-color:turquoise;
+        padding:30px;
+        margin-top:5px;
+        border-top:3px solid gray;
+        clip-path:polygon(0 0 , 100% 0, 100% 0 ,0 0);
+    }
+
+    header .navbar a{
+        flex:1 1 auto;
+        text-decoration: none;
+        font-weight:normal;
+        font-size:26px;
+        padding:8px;
+        padding-left:20px;
+        border-left:3px solid gray;
+        background-color:white;
+        width:100%;
+        color:rgb(0, 121, 80);
+        
+    }
+
+    header .navbar.active{
+        clip-path:polygon(0 0,100% 0 ,100% 100% ,0 100%);
+        padding:10px; 
+    }
+
+    .modal-header h1{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        font-size:18px;
+        color:white;
+        text-shadow:3px 3px 3px rgb(10, 167, 167),0 0 2px rgb(38, 224, 224);
+        font-weight:900;
+        font-family:"標楷體";
+    }
+
+    .modal-body h3{
+        font-size:26px;
+        color:black;
+        font-family:"標楷體";
+    }
+
+    /* 第二區幻燈片調整 */
+    .carousel{
+        margin-bottom:20px;
+        display:none
+    }
+
+    .carousel-inner .carousel-item img{
+        width:100%;
+        height:350px;
+    }
+
+    /* 第三區手機調整第一格調整 */
+
+    #introduce .box-container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        margin:20px;
+    }
+
+    #introduce .box-container .box{
+        flex:1 1 auto;
+        padding:10px;
+        box-shadow:5px 5px 5px rgb(140,140,140);
+        border:1px solid rgb(118,118,118);
+        background-color:rgb(255,208,0);
+        border-radius:20px;
+        padding-bottom:30px;
+        height:300px;
+        position:relative;
+        overflow: hidden;
+        box-shadow:0 2px 0 2px black;
+        z-index:-1;
+        opacity:0.9;
+    }
+
+    #introduce .box-container .box-spec{
+        flex:1 1 auto;
+        padding:10px;
+        box-shadow:5px 5px 5px rgb(140,140,140);
+        border:1px solid rgb(118,118,118);
+        background-color:rgb(255,208,0);
+        border-radius:20px;
+        padding-bottom:30px;
+        height:370px;
+        position:relative;
+        overflow: hidden;
+        box-shadow:0 2px 0 2px black;
+        z-index:-1;
+        opacity:0.9;
+    }
+
+    #introduce .box-container .box .image{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        position:absolute;
+        border-radius:20px;
+        top:0;
+        left:-120%;
+        z-index:-1;
+    }
+    
+    #introduce .box-container .box:hover .image{
+        left:0%;
+        transition: 1s;
+        z-index:-1;
+    }
+
+    /* 第三區第二格字體調整 */
+    #introduce .box-container .box-spec .content1 h3{
+        font-size:20px;
+        font-weight:900;
+        color:rgb(9,152,152)
+    }
+
+    /* footer visit調整 */
+    #visit{
+        position:absolute;
+        right:10px;
+        color:rgb(33, 33, 175);
+        font-weight:700;
+        font-size:18px;
+        border:3px solid lightgreen;
+        border-radius:15px;
+        padding:3px;
+        display:none;
+    }
+}
+
+
+
+
